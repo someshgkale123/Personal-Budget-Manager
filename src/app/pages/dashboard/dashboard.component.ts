@@ -21,7 +21,7 @@ export class DashboardComponent implements OnInit {
   {
 
     var txt;
-    setTimeout(() => {
+    this.authservice.timeout=setTimeout(() => {
       if (confirm("Your Session is about to expire in 20 seconds")) {
         txt = "Your session is refreshed";
         location.reload();

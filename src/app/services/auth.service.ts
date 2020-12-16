@@ -2,7 +2,8 @@
 import { Injectable } from '@angular/core';
 import {AngularFireAuth} from '@angular/fire/auth';
 import {Router} from '@angular/router';
-import{JanuaryComponent} from '../january/january.component';
+
+
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ import{JanuaryComponent} from '../january/january.component';
 export class AuthService {
 
   authState: any = null;
-
+  public timeout;
 
   constructor(public au: AngularFireAuth, private router: Router){
     this.au.authState.subscribe((auth => {
@@ -49,6 +50,7 @@ export class AuthService {
   signout(): void
   {
     this.au.signOut();
+    clearTimeout(this.timeout);
     this.router.navigate(['/login']);
   }
 }
