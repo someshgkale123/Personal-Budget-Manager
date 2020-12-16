@@ -1,20 +1,24 @@
+<!DOCTYPE html>
+<!-- Accessibility Change (Language) -->
+<html lang="en">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <div style="background-color: rgb(243, 247, 246);">
 <nav class="navbar navbar-dark">
-  <b>Menu</b>
+  <b>Dashboard</b>
 
 <button class="w3-button w3-blue w3-round-xxlarge" (click)="authservice.signout()"><b>Sign out</b></button>
 
 
 </nav>
 
-
   <div class="row justify-content-center p-4">
+    <!-- Accessibility Change (Heading) -->
     <h1> <b>Select month</b></h1>
   </div>
   <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Basic example">
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="F group">
+      <!-- Accessibility Semantic Change (button) -->
       <button type="button" (click)="clickjan()" class="btn btn-outline-primary">January</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="S group">
@@ -67,3 +71,4 @@
 
   <router-outlet></router-outlet>
 
+</html>

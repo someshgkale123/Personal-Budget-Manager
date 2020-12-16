@@ -24,6 +24,7 @@ export class DashboardComponent implements OnInit {
     setTimeout(() => {
       if (confirm("Your Session is about to expire in 20 seconds")) {
         txt = "Your session is refreshed";
+        location.reload();
       } else {
         txt = "Your session will expire soon";
         setTimeout(() => {
