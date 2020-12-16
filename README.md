@@ -2,15 +2,15 @@
 
 # Login Page
 
-![alt text](Login.png)
+![alt text](Login.PNG)
 
 # Add Budget Monthly
 
-![alt text](month.png)
+![alt text](month.PNG)
 
 # Visualize your monthly budget using Graphs
 
-![alt text](Garph.png)
+![alt text](Garph.PNG)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
