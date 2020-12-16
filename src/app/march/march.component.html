@@ -1,0 +1,87 @@
+<div class="container">
+  <div class="row justify-content-center p-4">
+    <h1> <b>Add new expense</b></h1>
+  </div>
+  <div class="row1 justify-content-center p-2">
+    <div class="col">
+      <input type="text" class="form-control" [(ngModel)]="Title" placeholder="Enter expense title">
+    </div>
+    <div class="col">
+      <input type="number" class="form-control" [(ngModel)]="Amount" placeholder="Enter expense amount">
+    </div>
+
+    <div class="col">
+      <button class="btn btn-primary justify-content-center" (click)="createrecord()" [disabled]="!Title || !Amount" >Add</button>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <div class="row p-5 justify-content-center">
+    <div class="col-sm-2" *ngFor ="let each of budget">
+      <div class="card text-center" *ngIf="!each.isEdit; else Hide" style="width:10rem;">
+        <div class="card-body">
+          <div class="card-header">
+            {{each.title}}
+          </div>
+          <div class="card-title">
+            Amount: {{each.amount}}
+          </div>
+
+          <span>
+            <button class="btn" (click)="editrecord(each)"><i class="fa fa-pencil"></i></button>
+            <button class="btn" (click)="deleterecord(each.id)"><i class="fa fa-trash"></i></button>
+          </span>
+        </div>
+      </div>
+      <ng-template #Hide>
+        <div class="card text-center" style="width:10rem;">
+          <div class="card-body" >
+            <div class="card-header">
+              Edit budget
+            </div>
+            <div class="row">
+              <div class="form-group">
+                <div class="col-md-12">
+                  <input type="text" [(ngModel)]="each.edittitle" class="form-control">
+                </div>
+                <div class="col-md-12">
+                  <input type="number" [(ngModel)]="each.editamount" class="form-control">
+                </div>
+              </div>
+            </div>
+            <button class="btn" (click)="updatebudget(each)"><i class="fa fa-refresh"></i></button>
+            <button class="btn" (click)="each.isEdit=false"><i class="fa fa-close"></i></button>
+
+          </div>
+        </div>
+
+      </ng-template>
+    </div>
+  </div>
+  <div class="page-area text-center">
+    <article>
+      <h3><b> Pie Chart</b> </h3>
+      <p>
+          <canvas id="myChart" width="400" height="400"></canvas>
+      </p>
+    </article>
+    <article>
+
+      <h3><b> Polar Area Chart</b> </h3>
+      <p>
+        <canvas id="myChart1" width="400" height="400"></canvas>
+    </p>
+  </article>
+  <article>
+
+    <h3><b> Bar Chart</b> </h3>
+    <p>
+      <canvas id="myChart2" width="400" height="400"></canvas>
+  </p>
+    </article>
+  </div>
+
+
+</div>
+

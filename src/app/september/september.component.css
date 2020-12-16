@@ -1,0 +1,38 @@
+.page-area {
+  max-width: 1000px;
+  display: flex;
+  padding-top: 30px;
+}
+
+main article {
+  display: inline-block;
+  width: 100%;
+  max-width: 350px;
+  text-align: justify;
+  margin: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  main article {
+      margin: 10px;
+  }
+}
+
+.row1 {
+  display: grid;
+  flex-wrap: wrap;
+  margin-right: -16px;
+  margin-left: -15px;
+}
+.col
+{
+  display: inline-grid;
+}
+
+h1 {
+  padding-top: 50px;
+  color: rgba(64, 64, 216, 0.85);
+}
+h3{
+  color: rgba(64, 64, 216, 0.85);
+}
