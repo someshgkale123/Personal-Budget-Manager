@@ -1,7 +1,16 @@
 # Budgetapp
 
 # Login Page
-![alt text](login.png)
+
+![alt text](Login.png)
+
+# Add Budget Monthly
+
+![alt text](month.png)
+
+# Visualize your monthly budget using Graphs
+
+![alt text](Garph.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
