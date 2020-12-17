@@ -26,7 +26,7 @@ export class AuthService {
     {
       this.authState = user;
       document.cookie=user.user.uid;
-
+      localStorage.setItem('flag','1');
     }).catch(error =>
       {
         console.log(error);
@@ -39,7 +39,7 @@ export class AuthService {
     {
       this.authState = user;
       document.cookie=user.user.uid;
-
+      localStorage.setItem('flag','1');
     }).catch(error =>
       {
         console.log(error);
@@ -51,6 +51,8 @@ export class AuthService {
   {
     this.au.signOut();
     clearTimeout(this.timeout);
+    localStorage.removeItem('flag');
     this.router.navigate(['/login']);
+
   }
 }

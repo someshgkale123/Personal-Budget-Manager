@@ -19,40 +19,40 @@
   <div class="btn-toolbar justify-content-center" role="toolbar" aria-label="Basic example">
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="F group">
       <!-- Accessibility Semantic Change (button) -->
-      <button type="button" (click)="clickjan()" class="btn btn-outline-primary">January</button>
+      <button type="button" (click)="clickjan()" class="btn btn-outline-primary" [disabled]="this.month==0">January</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="S group">
-      <button type="button" (click)="clickfeb()" class="btn btn-outline-primary">February</button>
+      <button type="button" (click)="clickfeb()" class="btn btn-outline-primary" [disabled]="this.month==1">February</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="T group">
-      <button type="button" (click)="clickmar()" class="btn btn-outline-primary">March</button>
+      <button type="button" (click)="clickmar()" class="btn btn-outline-primary" [disabled]="this.month==2">March</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Fo group">
-      <button type="button" (click)="clickapril()" class="btn btn-outline-primary">April</button>
+      <button type="button" (click)="clickapril()" class="btn btn-outline-primary" [disabled]="this.month==3">April</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Fi group">
-      <button type="button" (click)="clickmay()" class="btn btn-outline-primary">May</button>
+      <button type="button" (click)="clickmay()" class="btn btn-outline-primary" [disabled]="this.month==4">May</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Si group">
-      <button type="button" (click)="clickjune()" class="btn btn-outline-primary">June</button>
+      <button type="button" (click)="clickjune()" class="btn btn-outline-primary" [disabled]="this.month==5">June</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Se group">
-      <button type="button" (click)="clickjuly()" class="btn btn-outline-primary">July</button>
+      <button type="button" (click)="clickjuly()" class="btn btn-outline-primary" [disabled]="this.month==6">July</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="E group">
-      <button type="button" (click)="clickaug()" class="btn btn-outline-primary">August</button>
+      <button type="button" (click)="clickaug()" class="btn btn-outline-primary" [disabled]="this.month==7">August</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="N group">
-      <button type="button" (click)="clicksept()" class="btn btn-outline-primary">September</button>
+      <button type="button" (click)="clicksept()" class="btn btn-outline-primary" [disabled]="this.month==8">September</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Te group">
-      <button type="button" (click)="clickoct()" class="btn btn-outline-primary">October</button>
+      <button type="button" (click)="clickoct()" class="btn btn-outline-primary" [disabled]="this.month==9">October</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="El group">
-      <button type="button" (click)="clicknov()" class="btn btn-outline-primary">November</button>
+      <button type="button" (click)="clicknov()" class="btn btn-outline-primary" [disabled]="this.month==10">November</button>
     </div>
     <div class="btn-group mr-2 mt-2 mb-2" role="group" aria-label="Tw group">
-      <button type="button" (click)="clickdec()" class="btn btn-outline-primary">December</button>
+      <button type="button" (click)="clickdec()" class="btn btn-outline-primary" [disabled]="this.month==11">December</button>
     </div>
   </div>
 </div>

@@ -112,7 +112,9 @@ export class JanuaryComponent implements OnInit {
   deleterecord(budget_id)
   {
     this.jans.deletebudget(budget_id);
-    location.reload();
+    setTimeout(() => {
+      location.reload();
+    }, 100);
   }
 
 

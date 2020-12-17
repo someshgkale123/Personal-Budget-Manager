@@ -111,7 +111,9 @@ export class SeptemberComponent implements OnInit {
   deleterecord(budget_id)
   {
     this.sept.deletebudget(budget_id);
-    location.reload();
+    setTimeout(() => {
+      location.reload();
+    }, 100);
   }
 
 

@@ -11,3 +11,8 @@
 h1{
   color:blue;
 }
+button:disabled,
+button[disabled]{
+  background-color: #050700;
+  color: #ebe2e2;
+}

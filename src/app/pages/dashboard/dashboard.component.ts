@@ -14,11 +14,17 @@ export class DashboardComponent implements OnInit {
   public month=0;
 
 
-  constructor(public au:AngularFireAuth,public authservice:AuthService, private router:Router, public crudservice:CrudService) { }
+  constructor(public au:AngularFireAuth,public authservice:AuthService, private router:Router, public crudservice:CrudService) {
+    if(!localStorage.getItem('flag'))
+    {
+      this.router.navigate(['/login']);
+    }
+  }
 
 
   ngOnInit()
   {
+
 
     var txt;
     this.authservice.timeout=setTimeout(() => {

@@ -111,7 +111,9 @@ export class AprilComponent implements OnInit {
   deleterecord(budget_id)
   {
     this.april.deletebudget(budget_id);
-    location.reload();
+    setTimeout(() => {
+      location.reload();
+    }, 100);
   }
 
 
