@@ -16,7 +16,12 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   error: {name: string, message: string} = {name: '', message: ''};
 
-  constructor(private authservice: AuthService, private router:Router) { }
+  constructor(private authservice: AuthService, private router:Router) {
+    if(localStorage.getItem('flag')=='1')
+    {
+      this.router.navigate(['dashboard']);
+    }
+   }
 
 
   ngOnInit() {
